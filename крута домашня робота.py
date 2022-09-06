@@ -168,32 +168,29 @@ for video_file in video_files:
 
     # You need to sort filmes by conditions. First condition: genre is comedy and year less than 2000.
     # Second condtion is genre is comedy or thriller and film's year is greater or equal to 2019
-    if  genre == "comedy" and year < 2000 :
+    if  genre == "comedy" and year < 2000 and video_file not in video_to_watch_for_fun:
         video_to_watch_for_fun.append(video_file)
-    elif genre == "comedy" or genre == "thriller"  and year >= 2000:
+    elif  year >= 2019 and video_file not in new_video_to_watch :
         new_video_to_watch.append(video_file)
     else:
         maybe_later.append(video_file)
-    print(new_video_to_watch)
-#
-#
-#     # Use the method to create a comma separated strinf if files.
-#     # ["video_1.mp4", "video_2.mp4"] -> "video_1.mp4, video_2.mp4"
-#     video_to_watch_for_fun =  # -- * Your code here * --
-#     new_video_to_watch =  # -- * Your code here * --
-#     maybe_later =  # -- * Your code here * --
-#
-#     print("I want to watch it for fun:", video_to_watch_for_fun, end="\n\n")
-#     print("I want to watch new video:", new_video_to_watch, end="\n\n")
-#     print("Nah, I might watch it later:", maybe_later, end="\n\n")
-#
-# # RESULT
-# # I want to watch it for fun: (comedy) The Philadelphia Story (1940).mp4, (comedy) Harold and Maude (1971).mp4
-# #
-# # I want to watch new video: (thriller) The Gray Man (2022).mp4, (thriller) Synchronic (2019).mp4, (comedy) Booksmart (2019).mp4
-# #
-# # Nah, I might watch it later: (thriller) Level 16 (2018).mp4
+
+
+    # Use the method to create a comma separated strinf if files.
+    # ["video_1.mp4", "video_2.mp4"] -> "video_1.mp4, video_2.mp4"
+video_to_watch_for_fun = ",".join(video_to_watch_for_fun) # -- * Your code here * --
+new_video_to_watch = ",".join(new_video_to_watch) # -- * Your code here * --
+maybe_later = ",".join(maybe_later)  # -- * Your code here * --
+
+print("I want to watch it for fun:", video_to_watch_for_fun, end="\n\n")
+print("I want to watch new video:", new_video_to_watch, end="\n\n")
+print("Nah, I might watch it later:", maybe_later, end="\n\n")
+
+# RESULT
+# I want to watch it for fun: (comedy) The Philadelphia Story (1940).mp4, (comedy) Harold and Maude (1971).mp4
+# I want to watch new video: (thriller) The Gray Man (2022).mp4, (thriller) Synchronic (2019).mp4, (comedy) Booksmart (2019).mp4
+# Nah, I might watch it later: (thriller) Level 16 (2018).mp4
 
 
 
-#
+
