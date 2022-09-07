@@ -170,7 +170,7 @@ for video_file in video_files:
     # Second condtion is genre is comedy or thriller and film's year is greater or equal to 2019
     if  genre == "comedy" and year < 2000:
         video_to_watch_for_fun.append(video_file)
-    elif  year >= 2019:
+    elif (genre == "comedy" or genre == "thriller") and year >= 2019:
         new_video_to_watch.append(video_file)
     else:
         maybe_later.append(video_file)
